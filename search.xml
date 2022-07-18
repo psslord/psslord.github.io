@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>My New Post</title>
+      <link href="/2022/07/15/My-New-Post/"/>
+      <url>/2022/07/15/My-New-Post/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test1</title>
+      <link href="/2022/07/14/test1/"/>
+      <url>/2022/07/14/test1/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2022/07/14/test/"/>
+      <url>/2022/07/14/test/</url>
+      
+        <content type="html"><![CDATA[<p>#初步完成一个博客上传</p><p>##初始化</p><p>首先的在一个空文件夹里面初始化hexo环境，具体做法：点开空文件夹，鼠标右键点击git bash here，然后输入命令 hexo init和hexo install即可完成环境初始化。</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init</span><br><span class="line">hexo install</span><br></pre></td></tr></table></figure><p>##新建博客</p><p>完成初始化后我们转到所在目录即可进行接下来的操作</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd +目录名</span><br></pre></td></tr></table></figure><p>接下来我们新建一个博客，输入命令“hexo new 第一篇博客”即可生成初始文件</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new 第一篇博客</span><br></pre></td></tr></table></figure><p>#博客内容</p><p>##Front-matter</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: test</span><br><span class="line">date: 2022-07-14 16:53:45</span><br><span class="line">tags: self-learning </span><br><span class="line">categories:</span><br><span class="line">- learning</span><br><span class="line">---</span><br><span class="line">摘要名称</span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line">接下来是文章摘要的正文内容</span><br></pre></td></tr></table></figure><p>包括博客里面重要的内容，如题目、作者、分类、标签等，这里需要注意的是空格，即在标点后面需要添加空格，如冒号： 空格 。这部分还可以添加文章的摘要，添加格式如上所述。</p><p>##资源引用</p><p>当引用图片或其他形式的资源等，有以下两种方式解决：</p><p>1.使用绝对路径引用</p><p>2.使用相对路径引用</p><p>使用相对路径引用资源的时候，我们可以使用hexo提供的资源文件夹功能。</p><p>打开根目录下的_config.yml文件,将post_asset_folderde的值设为true</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure><p>修改之后会开启 Hexo 的文章资源文件管理功能。Hexo 将会在我们每一次通过 <code>hexo new &lt;title&gt;</code> 命令创建新文章时自动创建一个同名文件夹，于是我们便可以将文章所引用的相关资源放到这个同名文件夹下，然后通过相对路径引用。例如，你把一个 <code>example.jpg</code> 图片放在了这个同名文件夹中，使用相对路径的常规 markdown 语法 <code>![](./example.jpg)</code>即可访问 。</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![](./式28.jpg)</span><br></pre></td></tr></table></figure><p>上传测试！！！！！</p><p>上传后有延迟，需要等待几分钟后刷新网页才会出现新更改的内容。</p><p>PLus：上传的时候用校园网一直上传不上去，改用手机热点即可上传成功！！</p><p>#文章加密<br>##安装插件<br><code>npm install --save hexo-blog-encrypt</code></p><h2 id="设置配置文件"><a href="#设置配置文件" class="headerlink" title="设置配置文件"></a>设置配置文件</h2><ol><li><p>首先在站点配置文件中启动该插件，即打开根目录下的_congfig.yml文件修改以下选项</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">encrypt:</span><br><span class="line">    enable: true</span><br></pre></td></tr></table></figure></li><li><p>然后再文章front-matter中添加对应的字段，如password，abstract，message等</p></li></ol><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章加密</span><br><span class="line">date: 2019-01-04T22:20:13.000Z</span><br><span class="line">category: 教程</span><br><span class="line">tags:</span><br><span class="line">  - 博客</span><br><span class="line">  - Hexo</span><br><span class="line">keywords: 博客文章密码</span><br><span class="line">password: TloveY</span><br><span class="line">abstract: 密码：TloveY</span><br><span class="line">message:  输入密码，查看文章</span><br><span class="line">---</span><br></pre></td></tr></table></figure><ul><li>keyword: 关键字</li><li>password：密码</li><li>abstract：文章摘要</li><li>message：博客查看时，密码输入框上面的描述性文字</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> learning </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> self-learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2022/07/14/hello-world/"/>
+      <url>/2022/07/14/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
