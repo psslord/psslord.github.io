@@ -1,0 +1,530 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>python复习日记 | 深仔lord</title><meta name="keywords" content="python学习、大厂面试"><meta name="author" content="深仔lord"><meta name="copyright" content="深仔lord"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="大厂复习日记python篇   –day 1 2022-7-23目录###声明：这是一个复习blog，记录复习过程中的各种题库。资料由于是在网上收集的，所以可能出现各种大范围雷同。如果侵犯您的版权，请评论留言，我会第一时间做出相应调整。在此，特别鸣谢：Java架构师必看的进大厂必须掌握的面试题-100个python面试###  基本面试问题 OOPS面试问题 基本的python程序 python库">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python复习日记">
+<meta property="og:url" content="http://lordshen.work/2022/07/23/python%E5%A4%8D%E4%B9%A0%E6%97%A5%E8%AE%B0/index.html">
+<meta property="og:site_name" content="深仔lord">
+<meta property="og:description" content="大厂复习日记python篇   –day 1 2022-7-23目录###声明：这是一个复习blog，记录复习过程中的各种题库。资料由于是在网上收集的，所以可能出现各种大范围雷同。如果侵犯您的版权，请评论留言，我会第一时间做出相应调整。在此，特别鸣谢：Java架构师必看的进大厂必须掌握的面试题-100个python面试###  基本面试问题 OOPS面试问题 基本的python程序 python库">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://bpic.588ku.com/art_water_pic/20/03/10/19f5155409b232fde09d6e645d65b0b5.jpg">
+<meta property="article:published_time" content="2022-07-23T03:13:58.000Z">
+<meta property="article:modified_time" content="2022-07-24T15:04:59.785Z">
+<meta property="article:author" content="深仔lord">
+<meta property="article:tag" content="python学习、大厂面试">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bpic.588ku.com/art_water_pic/20/03/10/19f5155409b232fde09d6e645d65b0b5.jpg"><link rel="shortcut icon" href="/img/%E5%9B%BE%E6%A0%871.jpg"><link rel="canonical" href="http://lordshen.work/2022/07/23/python%E5%A4%8D%E4%B9%A0%E6%97%A5%E8%AE%B0/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 深仔lord","link":"链接: ","source":"来源: 深仔lord","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'python复习日记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-07-24 23:04:59'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://ts1.cn.mm.bing.net/th/id/R-C.0811280bb4b172c90460f660d5eaca23?rik=aCqCjkKOUo471g&amp;riu=http%3a%2f%2fuploadfile.bizhizu.cn%2f2015%2f0518%2f20150518024813922.jpg&amp;ehk=z93t2Erd7ob0vwJ%2bUntwqdsFgBcgur44ihveimU4E0c%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://img.zcool.cn/community/017586554926c70000019ae98c4a40.jpg@1280w_1l_2o_100sh.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">深仔lord</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">python复习日记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-07-23T03:13:58.000Z" title="发表于 2022-07-23 11:13:58">2022-07-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-07-24T15:04:59.785Z" title="更新于 2022-07-24 23:04:59">2022-07-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%A4%A7%E5%8E%82%E5%A4%8D%E4%B9%A0/">大厂复习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">6.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>21分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="python复习日记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="大厂复习日记python篇-–day-1-2022-7-23"><a href="#大厂复习日记python篇-–day-1-2022-7-23" class="headerlink" title="大厂复习日记python篇   –day 1 2022-7-23"></a>大厂复习日记python篇   –day 1 2022-7-23</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>###声明：这是一个复习blog，记录复习过程中的各种题库。资料由于是在网上收集的，所以可能出现各种大范围雷同。如果侵犯您的版权，请评论留言，我会第一时间做出相应调整。在此，特别鸣谢：Java架构师必看的<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/270331009">进大厂必须掌握的面试题-100个python面试</a>###</p>
+<ul>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98">基本面试问题</a></li>
+<li><a href="#OOPS%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98">OOPS面试问题</a></li>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E7%9A%84python%E7%A8%8B%E5%BA%8F">基本的python程序</a></li>
+<li><a href="#python%E5%BA%93">python库</a></li>
+</ul>
+<h2 id="基本面试问题"><a href="#基本面试问题" class="headerlink" title="基本面试问题"></a>基本面试问题</h2><ol>
+<li><p>python中的列表和元组有什么区别？、</p>
+<ul>
+<li><p>列表中的元素可以修改，元组中的元素不可修改，除非整个元组替换掉！</p>
+</li>
+<li><p>元组比列表更加轻量级，性能速度优于列表</p>
+</li>
+<li><p>元组可以在映射中当“键”使用，列表不能</p>
+</li>
+</ul>
+</li>
+<li><p>python主要功能是什么？</p>
+<ul>
+<li>python是一种解释型语言，与c语言不同，不需要编译</li>
+<li>python是动态类型的，不需要声明变量的类型</li>
+<li>python适合面向对象编程，因为它允许定义类以及组成和继承。python没有访问说明（如C++的public，private）（访问说明就是设置一个访问权限，不同人有着不同的权限）</li>
+<li>编写代码速度快，但运行时比编译语言要慢，但python允许C的扩展，可以很大部分消除瓶颈</li>
+<li>python有很多库，可以快速实现某项功能和解决某个问题</li>
+</ul>
+</li>
+<li><p>python是一种什么类型的语言？编程还是脚本？</p>
+<p>python能够编写脚本，但一般认为他是通用编程语言</p>
+</li>
+<li><p>python是一种解释语言吗？</p>
+<p>python是一种解释型语言。（解释型语言是指运行之前不需要编译，在运行时执行一句翻译一句为机器语言）</p>
+</li>
+<li><p>什么是pep 8？</p>
+<p>PEP代表python增强建议书（PEP8：python编程规范）。这是一组规则，用于指定如何格式化python代码以实现最大的可读性。</p>
+</li>
+<li><p>如何在python中管理内存？</p>
+<p>Python引用了一个内存池(memory pool)机制，即Pymalloc机制(malloc:n.分配内存)，用于管理对小块内存的申请和释放。</p>
+<p>主要有三种机制：</p>
+<ul>
+<li>引用计数机制。python内部使用引用计数，来保持追踪内存中的对象，python内部记录了对象有多少个引用，即引用计数，当对象被创建时就创建了一个引用计数，当对象不再需要时，这个对象的引用计数为0时，它被垃圾回收。</li>
+<li>垃圾回收机制。当内存中有不再使用的部分时（引用数为0），垃圾收集器就会把他们清理掉。它会去检查那些引用计数为0的对象，然后清除其在内存的空间；循环垃圾回收器（a引用b，b引用a，这种相互引用也会被清除）。</li>
+<li>内存池机制。内存池的概念就是预先在内存中申请一定数量的，大小相等的内存块留作备用，当有新的内存需求时，就先从内存池中分配内存给这个需求，不够了之后再申请新的内存。这样做最显著的优势就是能够减少内存碎片，提升效率。python引入内存池机制用于管理小块内存的申请和释放；同时，python将释放的内存返回给内存池，而不是操作系统；对于python对象（整数，浮点数和list等）有着独有的私有内存池，不同对象的内存池不共享。</li>
+</ul>
+</li>
+<li><p>python的命名空间是什么？</p>
+<p>命名空间是用于确保名称唯一以确保命名冲突的命名系统</p>
+</li>
+<li><p>什么是pythonpath？<br>这是一个环境变量，在导入模块时使用。当导入模块的时候，都会查找pythonpath以检查各个目录中是否存在导入的模块，解释器使用它来确定要加载哪个模块。</p>
+</li>
+<li><p>什么是python模块？命名python中一些常用的内置模块？<br>python模块是包含python代码的文件。该代码可以是函数类或者变量。python模块是包含可执行代码的.py文件<br>一些常用的内置模块是：</p>
+<ul>
+<li>操作系统-OS</li>
+<li>系统-sys</li>
+<li>数学-math</li>
+<li>随机-random</li>
+<li>资料时间-data time</li>
+<li>JSON格式</li>
+</ul>
+</li>
+<li><p>python中的局部变量和全局变量是什么？<br>全局变量：在函数外部或全局空间声明的变量，可被程序中的任何函数访问<br>局部变量：在函数内部声明的变量，只能在函数局部空间内被访问</p>
+</li>
+<li><p>python是否区分大小写？<br>是的，区分。</p>
+</li>
+<li><p>什么是python中的类型转换？<br>类型转换是将一种数据转换为另一种数据类型。</p>
+</li>
+</ol>
+<ul>
+<li>int（） 转换为整数类型</li>
+<li>float（） 转换为浮点数</li>
+<li>ord（） 将字符转换为整数</li>
+<li>hex（） 整数转换为十六进制</li>
+<li>oct（） 整数转换为八进制</li>
+<li>tuple（） 转换为元组</li>
+<li>set（） 转换为集合后返回类型</li>
+<li>list（） 转换为列表</li>
+<li>dict（）此函数用于将顺序（键，值）的元组转换为字典</li>
+<li>str（） 转换为字符串</li>
+</ul>
+<ol start="13">
+<li><p>如何在windows上安装python并设置路径变量？<br>从<a href="www.python.org">官网</a>上下载安装包，并按照提示符安装。<br>将安装路径添加到环境变量中（如点击计算机-&gt;属性-&gt;高级-&gt;环境变量-&gt;修改系统变量 path）</p>
+</li>
+<li><p>python是否需要缩进？<br>需要的，一般使用tab键缩进（四个空格）</p>
+</li>
+<li><p>python数组和列表有什么区别？<br>数组中的数据类型必须相同，列表则可以有多个数据类型元素。</p>
+</li>
+<li><p>python中的函数是什么？<br>是通过def语句定义的代码块，包含函数名，参数列表和函数体。</p>
+</li>
+<li><p>什么是init？<br>init是Python中的方法或构造函数。创建类的新对象/实例时，将自动调用此方法以分配内存。所有类都具有init方法。</p>
+</li>
+<li><p>什么是lambda函数？<br>匿名函数被称为lambda函数，此函数可以有任何数量的参数，但只能有一个语句</p>
+</li>
+<li><p>python中的self是什么？<br>self是类的实例或对象。在python中，这包括为第一个参数。init方法中的self变量引用新创建的对象，而其他方法中的self变量引用其方法被调用的对象。</p>
+</li>
+<li><p>什么是break、continue和pass？</p>
+</li>
+</ol>
+<ul>
+<li>break：跳出当前循环</li>
+<li>continue： 跳出本次循环，后面语句不再执行</li>
+<li>pass：主要用于占位</li>
+</ul>
+<ol start="21">
+<li><p>[::-1]是做什么的？<br>用于逆序输出，原始数组或者列表保持不变。</p>
+</li>
+<li><p>如何在python中将列表项随机化？<br>利用random库中的相关函数实现相关功能。</p>
+</li>
+<li><p>什么是python迭代器？<br>迭代器是可以遍历或迭代的对象。</p>
+</li>
+<li><p>如何在python中生成随机数？<br>调用random库中的相关函数。如：</p>
+</li>
+</ol>
+<p>   random.random()  返回[0,1)范围内的随机浮点数。</p>
+<ol start="25">
+<li><p>range()和xrange()有什么区别吗？<br>功能基本一致，但xrange（）对内存使用更加友好一点</p>
+</li>
+<li><p>如何在python中写注释？<br>使用#注释，有时候也可以用三引号引起来的字符串进行注释。</p>
+</li>
+<li><p>什么是**pickling和unpickling**？<br>pickle模块接受任何python对象并将其转换为字符串表示形式，并使用转储函数将其转储到文件中，此过程称之为pickling，从存储的字符串表示形式检索原始python对象的过程称为unpickling。</p>
+</li>
+<li><p>python中的生成器什么？<br>返回可迭代项目集的函数称为生成器。</p>
+</li>
+<li><p>如何大写字符串的第一个字母？<br>capitalize（）函数将字符串的首字母大写。</p>
+</li>
+<li><p>如何将字符串全部小写？<br>lower（）函数</p>
+</li>
+<li><p>如何在python中注释多行？<br>每行都要以#开头，不过jupyter 或pycharm有快捷键ctrl+/</p>
+</li>
+<li><p>python中的文档字符串是什么？<br>文档字符串用三引号引起来，没有被分配任何变量，有注释作用。</p>
+</li>
+<li><p>操作符和操作符的目的是什么？<br>可分为运算符和分隔符。运算符是特殊功能。它们采用一个或多个值并产生相应的结果。</p>
+</li>
+<li><p>python中的help（）和dir（）函数的用法是什么？<br>Help（）和dir（）这两个函数都可以从Python解释器访问，并用于查看内置函数的合并转储。Help（）函数：help（）函数用于显示文档字符串，还可以帮助您查看与模块，关键字，属性等有关的帮助；Dir（）函数：dir（）函数用于显示定义的符号。</p>
+</li>
+<li><p>当python退出时，为什么不取消分配所有内存？<br>那些具有对象循环引用或者全局命名空间引用的变量，在 Python 退出是往往不会被释放的，另外不会释放 C 库保留的部分内容。</p>
+</li>
+<li><p>python中的字典是什么？<br>python中的内置数据类型称为字典，它定义了键和值之间的一对一关系。字典包含一对键及其对应的值。字典由键索引。</p>
+</li>
+<li><p>如何在python中使用三元运算符？（这个我目前还不懂是啥）<br>三元运算符是用于显示条件语句的运算符。它由true或false值以及必须对其评估的语句组成。</p>
+</li>
+<li><p>*args,*kwargs是什么？有什么作用？<br>当我们不确定向函数传递多少参数时，或者将存储的参数列表或元组传递给函数时，可以使用*arges,* kwargs在我们不知道将多少个关键字参数传递给一个函数时使用，或者可用于将字典的值作为关键字参数传递</p>
+</li>
+<li><p>len()是做什么的？<br>确定字符串、列表、数组的长度</p>
+</li>
+<li><p>解释python中”re”模块的split（），sub（）、subn（）方法<br>为了修改字符串，Python的“ re”模块提供了3种方法：</p>
+</li>
+</ol>
+<ul>
+<li>split（）–使用正则表达式模式将给定的字符串“拆分”为列表</li>
+<li>sub（）–查找所有与正则表达式模式匹配的子字符串，然后将其替换为其他字符串</li>
+<li>subn（）–它类似于sub（），并且还返回新字符串以及no更换</li>
+</ul>
+<ol start="41">
+<li><p>什么是负索引，为什么要使用他们？<br>当遍历所索引序列时，可以从序列由前到后遍历，此时索引数为正，也是就正索引，同理当有后向前遍历序列时，索引数为负数，就是负索引，何时使用正索引还是负索引完全看具体情况哪种索引方便，一个从前往后数，一个从后往前数，方向不一致而已。</p>
+</li>
+<li><p>什么是python包？<br>python软件包是包含多个模块的名称空间</p>
+</li>
+<li><p>如何用python删除文件？<br>导入OS模块，使用<code>os.remove</code>即可</p>
+</li>
+<li><p>python的内置类型是什么？<br>python的内置类型如下：</p>
+</li>
+</ol>
+<ul>
+<li>Integers</li>
+<li>Floating-point</li>
+<li>Complex numbers</li>
+<li>Strings</li>
+<li>Boolean</li>
+<li>Built-in functions</li>
+</ul>
+<ol start="45">
+<li><p>与python列表相比，numpy数组有什么优势？<br>相比来说，numpy不仅效率更高，而且更加方便。可以支持“向量化”操作，可以快速简单地实现矩阵和矢量运算；而且速度还更快，功能更加丰富。</p>
+</li>
+<li><p>如何将值添加到python数组组？<br>可以使用相关函数将元素添加到数组里面。如：append（），extend（），insert（i，x）。</p>
+</li>
+<li><p>如何删除值到python数组？<br>可以使用相关函数实现该功能。pop（）：返回删除值；remove（）：不返回删除值。</p>
+</li>
+<li><p>python是否具有OOps概念？<br>Python是一种面向对象的编程语言。这意味着可以通过创建对象模型在python中解决任何程序。但是，Python既可以当作过程语言，也可以当作结构语言。</p>
+</li>
+<li><p>深层复制和浅层复制有什么区别？<br>浅层复制：实现对象间数据元素的一一对应复制；深层复制：当被复制的对象数据成员是指针类型时，不是复制该指针成员本身，而是将指针所指对象进行复制。在python中，浅层复制会随原对象变化而变化，深层复制则不会。</p>
+</li>
+<li><p>如何在python中实现多线程？<br>可以通过导入threading模块来实现。（但我没试过，不知道效果咋样）</p>
+</li>
+<li><p>在python中编译和链接的过程是什么？<br>编译：python中的源代码保存为.py文件，然后将其编译为称为字节码的格式，然后将字节码转换为机器码。编译后，代码存储在.pyc文件中，并在更新源代码时重新生成。此过程称为编译；<br>链接：链接是最后一个阶段，其中所有功能都与它们的定义链接在一起，因为链接器知道在哪里实现所有这些功能。此过程称为链接。<br>在python中编译和链接允许正确编译新扩展而不会出现任何错误，并且只有在通过编译过程时才能进行链接。如果使用动态加载，则它取决于系统提供的样式。</p>
+</li>
+<li><p>什么是python库？<br>python库是python软件包的集合。如numpy，pandas，matplotlib，scikit-learn等。</p>
+</li>
+<li><p>拆分的用途是什么？<br>split（）用于分割给定的字符串。</p>
+</li>
+<li><p>在python中如何导入模块？<br>使用关键字import导入，有三种方式导入：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> array</span><br><span class="line"><span class="keyword">import</span> array <span class="keyword">as</span> arr</span><br><span class="line"><span class="keyword">from</span> array <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure></li>
+<li><p>dict 的 items() 方法与 iteritems() 方法的不同？</p>
+<p>items方法将所有的字典以列表方式返回，其中项在返回时没有特殊的顺序；</p>
+<p>iteritems方法有相似的作用，但是返回一个迭代器对象</p>
+</li>
+<li><p>说明OS，sys模块的不同，并列举常用的模块方法</p>
+<p>os：提供了一种方便的使用操作系统的方法</p>
+<p>sys：可供访问由解释器使用或维护的变量和与解释器进行交互的函数</p>
+<p>总结：os模块负责程序与操作系统的交互，提供了访问操作系统底层的接口;sys模块负责程序与python解释器的交互，提供了一系列的函数和变量，用于操控python的运行时环境。</p>
+<p>os常用方法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">os.remove(‘path/filename’) #删除文件</span><br><span class="line">os.rename(oldname, newname) #重命名文件</span><br><span class="line">os.walk() #生成目录树下的所有文件名</span><br><span class="line">os.chdir(&#x27;dirname&#x27;) #改变目录</span><br><span class="line">os.mkdir/makedirs(&#x27;dirname&#x27;) #创建目录/多层目录</span><br><span class="line">os.rmdir/removedirs(&#x27;dirname&#x27;) #删除目录/多层目录</span><br><span class="line">os.listdir(&#x27;dirname&#x27;) #列出指定目录的文件</span><br><span class="line">os.getcwd() #取得当前工作目录</span><br><span class="line">os.chmod() #改变目录权限</span><br><span class="line">os.path.basename(‘path/filename’) #去掉目录路径，返回文件名</span><br><span class="line">os.path.dirname(‘path/filename’) #去掉文件名，返回目录路径</span><br><span class="line">os.path.join(path1[,path2[,...]]) #将分离的各部分组合成一个路径名</span><br><span class="line">os.path.split(&#x27;path&#x27;) #返回( dirname(), basename())元组</span><br><span class="line">os.path.splitext() #返回 (filename, extension) 元组</span><br><span class="line">os.path.getatime\ctime\mtime #分别返回最近访问、创建、修改时间</span><br><span class="line">os.path.getsize() #返回文件大小</span><br><span class="line">os.path.exists() #是否存在</span><br><span class="line">os.path.isabs() #是否为绝对路径</span><br><span class="line">os.path.isdir() #是否为目录</span><br><span class="line">os.path.isfile() #是否为文件</span><br></pre></td></tr></table></figure>
+
+<p>sys常用方法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sys.argv #命令行参数List，第一个元素是程序本身路径</span><br><span class="line">sys.modules.keys() #返回所有已经导入的模块列表</span><br><span class="line">sys.exc_info() #获取当前正在处理的异常类,exc_type、exc_value、exc_traceback当前处理的异常详细信息</span><br><span class="line">sys.exit(n) #退出程序，正常退出时exit(0)</span><br><span class="line">sys.hexversion #获取Python解释程序的版本值，16进制格式如：0x020403F0</span><br><span class="line">sys.version #获取Python解释程序的版本信息</span><br><span class="line">sys.maxint #最大的Int值</span><br><span class="line">sys.maxunicode #最大的Unicode值</span><br><span class="line">sys.modules #返回系统导入的模块字段，key是模块名，value是模块</span><br><span class="line">sys.path #返回模块的搜索路径，初始化时使用PYTHONPATH环境变量的值</span><br><span class="line">sys.platform #返回操作系统平台名称</span><br><span class="line">sys.stdout #标准输出</span><br><span class="line">sys.stdin #标准输入</span><br><span class="line">sys.stderr #错误输出</span><br><span class="line">sys.exc_clear() #用来清除当前线程所出现的当前的或最近的错误信息</span><br><span class="line">sys.exec_prefix #返回平台独立的python文件安装的位置</span><br><span class="line">sys.byteorder #本地字节规则的指示器，big-endian平台的值是&#x27;big&#x27;,little-endian平台的值是&#x27;little&#x27;</span><br><span class="line">sys.copyright #记录python版权相关的东西</span><br><span class="line">sys.api_version #解释器的C的API版本</span><br><span class="line">sys.stdin,sys.stdout,sys.stderr</span><br></pre></td></tr></table></figure></li>
+<li><p>Python里面如何拷贝一个对象？deepcopy 和 copy的区别？</p>
+<p>copy: 仅拷贝对象本身，而不拷贝对象中引用的其它对象;</p>
+<p>deepcopy: 除拷贝对象本身，而且拷贝对象中引用的其它对象。</p>
+</li>
+<li><p>os.path和sys.path的区别？</p>
+<p>os.path是module，包含了各种处理长文件名(路径名)的函数；</p>
+<p>sys.path是由目录名构成的列表，Python 从中查找扩展模块( Python 源模块, 编译模块,或者二进制扩展)。 启动 Python 时,这个列表从根据内建规则,PYTHONPATH 环境变量的内容, 以及注册表( Windows 系统)等进行初始化。</p>
+</li>
+<li><p>re模块中match和search方法的不同？</p>
+<p>match() 函数只检查 RE 是否在字符串开始处匹配，而search() 则是扫描整个字符串。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import re</span><br><span class="line">print(re.match(&#x27;super&#x27;, &#x27;superstition&#x27;).span()) #检查super在字符串superstition中是否匹配，因为superstition中的super字符串在开头，此时，返回super在superstition中的起止位置；.span（）返回一个包括匹配的起止位置元组</span><br><span class="line">(0,5)</span><br><span class="line">print(re.match(&#x27;super&#x27;,&#x27;insuperable&#x27;)) #因为super不在insuperable的开头，所以返回none</span><br><span class="line">None</span><br><span class="line">print(re.search(&#x27;super&#x27;,&#x27;superstition&#x27;).span())</span><br><span class="line">(0,5)</span><br><span class="line">print(re.search(&#x27;super&#x27;,&#x27;insuperable&#x27;).span())</span><br><span class="line">(2,7)</span><br></pre></td></tr></table></figure></li>
+<li><p>解释生成器(generator)与函数的不同，并实现和使用简单generator？</p>
+<p>生成器和函数的主要区别在于函数 return a value，生成器 yield a value同时标记或记忆point of the yield 以便于在下次调用时从标记点恢复执行。 yield 使函数转换成生成器，而生成器反过来又返回迭代器。生成器的优点在于处理比较大的列表时节约内存。</p>
+<p>利用函数生成Fibonacci系列</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">def fun(max): n为数量</span><br><span class="line">    a=[]</span><br><span class="line">    a.append(0)</span><br><span class="line">    a.append(1)</span><br><span class="line">    for i in range(max-2):</span><br><span class="line">        a.append(a[-1]+a[-2])</span><br><span class="line">    return a</span><br><span class="line">#主函数</span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">	for m in fun(10):</span><br><span class="line">    	print(m,end=&quot; &quot;)</span><br></pre></td></tr></table></figure>
+
+<p>利用生成器生成Fibonacci系列</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">def fun(max):</span><br><span class="line">	n1=0 #第一个值</span><br><span class="line">	n2=1 #第二个值</span><br><span class="line">	num=0 #记录数量</span><br><span class="line">	while num&lt;max:</span><br><span class="line">		yield n1</span><br><span class="line">		n1,n2=n2,n1+n2</span><br><span class="line">		num+=1</span><br><span class="line">#主函数</span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">	for n in fun(10):</span><br><span class="line">		print(n,end=&quot; &quot;)</span><br></pre></td></tr></table></figure></li>
+<li><p>解释一下 WSGI 和 FastCGI 的关系？</p>
+<p>CGI全称是“公共网关接口”(CommonGateway Interface)，HTTP服务器与你的或其它机器上的程序进行“交谈”的一种工具，其程序须运行在网络服务器上。CGI可以用任何一种语言编写，只要这种语言具有标准输入、输出和环境变量。如php,perl,tcl等。</p>
+<p>FastCGI像是一个常驻(long-live)型的CGI，它可以一直执行着，只要激活后，不会每次都要花费时间去fork一次(这是CGI最为人诟病的fork-and-execute模式)。它还支持分布式的运算, 即 FastCGI 程序可以在网站服务器以外的主机上执行并且接受来自其它网站服务器来的请求。</p>
+<p>FastCGI是语言无关的、可伸缩架构的CGI开放扩展，其主要行为是将CGI解释器进程保持在内存中并因此获得较高的性能。众所周知，CGI解释器的反复加载是CGI性能低下的主要原因，如果CGI解释器保持在内存中并接受FastCGI进程管理器调度，则可以提供良好的性能、伸缩性、Fail- Over特性等等。</p>
+<p>WSGI的全称为： PythonWeb Server Gateway Interface v1.0 （Python Web 服务器网关接口），</p>
+<p>它是 Python 应用程序和 WEB 服务器之间的一种接口。</p>
+<p>它的作用，类似于FCGI 或 FASTCGI 之类的协议的作用。</p>
+<p>WSGI 的目标，是要建立一个简单的普遍适用的服务器与 WEB 框架之间的接口。</p>
+<p>Flup就是使用 Python 语言对 WSGI 的一种实现，是可以用于 Python 的应用开发中的一种工具或者说是一种库。</p>
+<p>Spawn-fcgi是一个小程序，这个程序的作用是管理fast-cgi进程，那么管理wsgi进程也是没有问题的，功能和php-fpm类似。</p>
+<p>故，简单地说，WSGI和FastCGI都是一种CGI，用于连接WEB服务器与应用程序，而WSGI专指Python应用程序。而flup是WSGI的一种实现，Spawn-fcgi是用于管理flup进程的一个工具，可以启动多个wsgi进程，并管理它们。</p>
+</li>
+<li><p>解释一下 Django 和 Tornado 的关系、差别（待解决）</p>
+</li>
+</ol>
+<h2 id="OOPS面试问题"><a href="#OOPS面试问题" class="headerlink" title="OOPS面试问题"></a>OOPS面试问题</h2><ol>
+<li><p>用一个例子解释python中的继承。</p>
+<p> 继承允许一个类获取另一个类的所有成员（如属性和方法）。继承提供了代码可重用性，使创建和维护应用程序变得更加容易。我们继承的类称为超类，而继承的类称为派生/子类。</p>
+<p> python支持的不同类型继承：</p>
+<ol>
+<li>单一继承：派生类获取某个超类的成员</li>
+<li>多级继承：从基类base1继承的派生类的d1和从base2继承的d2</li>
+<li>层级继承：从一个基类可以继承任意数量的子类</li>
+<li>多重继承：派生类继承自多个基类</li>
+</ol>
+</li>
+<li><p>如何在python中创建类？</p>
+<p> 使用关键字class创建</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ssp</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">	<span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name,age,sex</span>):<span class="comment">#self代表类的实例，是通过类创建的实例</span></span><br><span class="line">		self.name=name</span><br><span class="line">		self.age=age</span><br><span class="line">		self.sex=sex</span><br><span class="line">	<span class="keyword">def</span> <span class="title function_">info</span>(<span class="params">self</span>):</span><br><span class="line">		<span class="built_in">print</span>(<span class="string">&quot;姓名:&#123;0&#125;;年龄:&#123;1&#125;;性别:&#123;2&#125;&quot;</span>.<span class="built_in">format</span>(<span class="string">&quot;name&quot;</span>,<span class="string">&quot;age&quot;</span>,<span class="string">&quot;sex&quot;</span>))</span><br><span class="line">ssp=ssp(<span class="string">&quot;ssp&quot;</span>,<span class="string">&quot;24&quot;</span>,<span class="string">&quot;man&quot;</span>)</span><br><span class="line">ssp.name</span><br><span class="line"><span class="string">&#x27;ssp&#x27;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>python中的猴子补丁是什么？</p>
+<p>  在Python中，术语“猴子补丁”仅指运行时对类或模块的动态修改。</p>
+</li>
+<li><p>python是否支持多重继承？</p>
+<p> 多重继承意味着一个类可以从多个父类派生，python支持多重继承。</p>
+</li>
+<li><p>什么是python中的多态？</p>
+<p> 多态性是指采取多种形式的能力。例如，如果父类具有一个名为ABC的方法，则子类也可以具有一个具有相同名称和参数的ABC方法。Python允许多态。</p>
+</li>
+<li><p>在python中定义封装？</p>
+<p> 封装意味着将代码和数据绑定在一起。</p>
+</li>
+<li><p>如何在python中进行数据抽象？</p>
+<p> 在python中可以使用接口和抽象类来实现。</p>
+</li>
+<li><p>python是否使用访问说明符？</p>
+<p> 否！python不会剥夺对实例变量或函数的访问权限。python提出了在变量，函数或方法的名称前加上单下划线或双下划线的概念，类似于保护和私有访问说明符。</p>
+</li>
+<li><p>如何在python中创建一个空类？</p>
+<p> 空类是在其块内未定义任何代码的类，可以使用空语句pass来创建。</p>
+</li>
+<li><p>object（）有什么作用？</p>
+<p>返回一个无特征的对象，该对象是所有类的基础，而且，它不带任何参数。</p>
+</li>
+</ol>
+<h2 id="基本的python程序"><a href="#基本的python程序" class="headerlink" title="基本的python程序"></a>基本的python程序</h2><ol>
+<li><p>用python编写程序执行冒泡排序算法。</p>
+<p> 冒泡算法：一次比较两个元素，如果他们的顺序错误就把他们交换过来。</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">maopao</span>(<span class="params">a</span>):</span><br><span class="line">	<span class="built_in">len</span>=<span class="built_in">len</span>(a)<span class="comment">#获取列表的长度</span></span><br><span class="line">	<span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>):</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>-<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> a[i]&gt;a[i+<span class="number">1</span>]:</span><br><span class="line">                <span class="comment">#c=a[i]</span></span><br><span class="line">                <span class="comment">#a[i]=a[i+1]</span></span><br><span class="line">                <span class="comment">#a[i+1]=c</span></span><br><span class="line">                a[i],a[i+<span class="number">1</span>]=a[i+<span class="number">1</span>],a[i]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">    <span class="keyword">return</span> a	</span><br></pre></td></tr></table></figure></li>
+<li><p>用python编写程序生成星型三角形。</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">def sjx(a):#a为三角形层数</span><br><span class="line">	for i in range(a):</span><br><span class="line">		print(&#x27; &#x27;*(a+1-i)+&#x27;*&#x27;*(2*i+1))</span><br><span class="line">sjx(9)</span><br></pre></td></tr></table></figure></li>
+<li><p>编写程序用python生成Fibonacci系列。</p>
+<p> Fibonacci系列：由0和1开始，之后的费波那契系数就由之前的两数相加。首几个费波那契系数是：0，1，1，2，3，5，8，13，21……</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a=[]</span><br><span class="line">b=int(input())#生成多少个</span><br><span class="line">a.append(0)</span><br><span class="line">a.append(1)</span><br><span class="line">for i in range(b-2):</span><br><span class="line">	a.append(a[-1]+a[-2])</span><br><span class="line">print(a) </span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li><p>用python编写程序检查数字是否为质数。</p>
+<p> 质数：一个大于1的自然数，除了1和它自身外，不能被其他自然数整除的数叫做质数；否则称为合数。质数p的约数只有两个：1和p。</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a= int(input()) </span><br><span class="line">b=0</span><br><span class="line">for i in range(2,a-1):</span><br><span class="line">	if a/i==int(a/i):</span><br><span class="line">		b+=1</span><br><span class="line">	else:</span><br><span class="line">		b+=0</span><br><span class="line">if b==0:</span><br><span class="line">	print(yes)</span><br><span class="line">else:</span><br><span class="line">	print(no)</span><br></pre></td></tr></table></figure></li>
+<li><p>用python编写程序以检查序列是否是回文。</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a=input()</span><br><span class="line">b=a[::-1]</span><br><span class="line">if a==b:</span><br><span class="line">	print(yes)</span><br><span class="line">else:</span><br><span class="line">	print(no)</span><br></pre></td></tr></table></figure></li>
+<li><p>编写一个单行，将计算文件中大写字母的数量。即使文件太大而无法容纳在内存中，您的代码也应该可以工作。</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">f=open(&quot;lujing&quot;,&#x27;r&#x27;)</span><br><span class="line">a=f.readlines()</span><br><span class="line">count=0</span><br><span class="line">for i in a:</span><br><span class="line">	for j in i:</span><br><span class="line">		if j.isupper():</span><br><span class="line">			count+=1</span><br><span class="line">##转换为单行</span><br><span class="line">count sum(1 for i in a for j in i if j.isupper())</span><br></pre></td></tr></table></figure>
+
+</li>
+<li><p>用python为数字数据集编写排序算法</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a=input()</span><br><span class="line">c=a</span><br><span class="line">b=[]</span><br><span class="line">for in in range(len(a)-1):</span><br><span class="line">	b.append(c.min())</span><br><span class="line">	c.remove(c.min())</span><br><span class="line">b.append(a.max())</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="深仔lord">深仔lord</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://lordshen.work/2022/07/23/python%E5%A4%8D%E4%B9%A0%E6%97%A5%E8%AE%B0/">http://lordshen.work/2022/07/23/python复习日记/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://lordshen.work" target="_blank">深仔lord</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/python%E5%AD%A6%E4%B9%A0%E3%80%81%E5%A4%A7%E5%8E%82%E9%9D%A2%E8%AF%95/">python学习、大厂面试</a></div><div class="post_share"><div class="social-share" data-image="https://bpic.588ku.com/art_water_pic/20/03/10/19f5155409b232fde09d6e645d65b0b5.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/%E5%BE%AE%E4%BF%A1%E8%B5%9E%E8%B5%8F.jpg" target="_blank"><img class="post-qr-code-img" src="/img/%E5%BE%AE%E4%BF%A1%E8%B5%9E%E8%B5%8F.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/%E6%94%AF%E4%BB%98%E5%AE%9D%E8%B5%9E%E8%B5%8F.jpg" target="_blank"><img class="post-qr-code-img" src="/img/%E6%94%AF%E4%BB%98%E5%AE%9D%E8%B5%9E%E8%B5%8F.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2022/07/18/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/"><img class="prev-cover" src="https://ts1.cn.mm.bing.net/th/id/R-C.4b1d5d2510e17cdccbc0c97234a8f94c?rik=xOAZcO6nXuCSDw&amp;riu=http%3a%2f%2fwww.qqwjx.com%2fuploads%2fallimg%2f130206%2f1512216160-25.jpg&amp;ehk=%2bevZpoN7e5H9t01h4kHW9JWUPzwIrdP0pagu72QFDNw%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0&amp;sres=1&amp;sresct=1" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">科学上网搭建方法</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://ts1.cn.mm.bing.net/th/id/R-C.0811280bb4b172c90460f660d5eaca23?rik=aCqCjkKOUo471g&amp;riu=http%3a%2f%2fuploadfile.bizhizu.cn%2f2015%2f0518%2f20150518024813922.jpg&amp;ehk=z93t2Erd7ob0vwJ%2bUntwqdsFgBcgur44ihveimU4E0c%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">深仔lord</div><div class="author-info__description">Just be fun!!!</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/psslord/psslord.github.io.git"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%A7%E5%8E%82%E5%A4%8D%E4%B9%A0%E6%97%A5%E8%AE%B0python%E7%AF%87-%E2%80%93day-1-2022-7-23"><span class="toc-number">1.</span> <span class="toc-text">大厂复习日记python篇   –day 1 2022-7-23</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-number">1.1.</span> <span class="toc-text">目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98"><span class="toc-number">1.2.</span> <span class="toc-text">基本面试问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OOPS%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98"><span class="toc-number">1.3.</span> <span class="toc-text">OOPS面试问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%9A%84python%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.4.</span> <span class="toc-text">基本的python程序</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/07/23/python%E5%A4%8D%E4%B9%A0%E6%97%A5%E8%AE%B0/" title="python复习日记"><img src="https://bpic.588ku.com/art_water_pic/20/03/10/19f5155409b232fde09d6e645d65b0b5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python复习日记"/></a><div class="content"><a class="title" href="/2022/07/23/python%E5%A4%8D%E4%B9%A0%E6%97%A5%E8%AE%B0/" title="python复习日记">python复习日记</a><time datetime="2022-07-23T03:13:58.000Z" title="发表于 2022-07-23 11:13:58">2022-07-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/18/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/" title="科学上网搭建方法"><img src="https://ts1.cn.mm.bing.net/th/id/R-C.4b1d5d2510e17cdccbc0c97234a8f94c?rik=xOAZcO6nXuCSDw&amp;riu=http%3a%2f%2fwww.qqwjx.com%2fuploads%2fallimg%2f130206%2f1512216160-25.jpg&amp;ehk=%2bevZpoN7e5H9t01h4kHW9JWUPzwIrdP0pagu72QFDNw%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0&amp;sres=1&amp;sresct=1" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="科学上网搭建方法"/></a><div class="content"><a class="title" href="/2022/07/18/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/" title="科学上网搭建方法">科学上网搭建方法</a><time datetime="2022-07-18T10:57:52.000Z" title="发表于 2022-07-18 18:57:52">2022-07-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/14/hexo+butterfly%E5%8D%9A%E5%AE%A2%E5%AD%A6%E4%B9%A0/" title="hexo+butterfly博客学习"><img src="https://th.bing.com/th/id/R.920e2e17501ed36d5eb52567dc2593e9?rik=Fnuzv8Uf3jG%2f5g&amp;riu=http%3a%2f%2fwww.gx8899.com%2fuploads%2fallimg%2f2016070111%2fvlpt3ira4ey.jpg&amp;ehk=qjyZshO91W906NhayKv0JiM4PYkscxvP4%2ff3Bul%2biIE%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0&amp;sres=1&amp;sresct=1" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo+butterfly博客学习"/></a><div class="content"><a class="title" href="/2022/07/14/hexo+butterfly%E5%8D%9A%E5%AE%A2%E5%AD%A6%E4%B9%A0/" title="hexo+butterfly博客学习">hexo+butterfly博客学习</a><time datetime="2022-07-14T08:53:45.000Z" title="发表于 2022-07-14 16:53:45">2022-07-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 By 深仔lord</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to Singlelord's blog</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>(() => {
+  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaidWrap.length) {
+    window.runMermaid = () => {
+      window.loadMermaid = true
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+      Array.from($mermaidWrap).forEach((item, index) => {
+        const mermaidSrc = item.firstElementChild
+        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+        const mermaidID = 'mermaid-' + index
+        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
+        })
+      })
+    }
+
+    const loadMermaid = () => {
+      window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+    }
+
+    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+  }
+})()</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo-psslord.vercel.app/',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo-psslord.vercel.app/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
